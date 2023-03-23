@@ -19,6 +19,7 @@ const Add = () => {
   const handleAddPost = async(e) => {
     e.preventDefault();
     await addDoc(postsCollectionRef, {
+      key: crypto.randomUUID(),
       title,
       category,
       content,

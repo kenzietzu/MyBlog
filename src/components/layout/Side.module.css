@@ -1,3 +1,25 @@
 .sideBox {
     flex: 3;
 }
+
+.sideTitle {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.sideTagBox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+}
+
+.sideTag {
+    background-color: rgb(215, 215, 215);
+    padding: 0.4rem 0.6rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: rgb(61, 61, 61);
+    word-break: keep-all;
+}

@@ -1,0 +1,43 @@
+.postContainer {
+    display: flex;
+}
+
+.postBox {
+    margin: 0 auto;
+    width: 70rem;
+    max-height: 40rem;
+    padding: 5rem 5rem;
+    background-color: rgb(243, 243, 243);
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.postBox::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgb(142, 142, 142);
+}
+
+.post {
+    
+}
+
+.title {
+    font-size: 2rem;
+    color: rgb(77, 77, 77);
+}
+
+.category {
+}
+
+.date {
+
+}
+
+.authorName {
+
+}
+
+.content {
+    font-size: 1.8rem;
+    margin-top: 1.7rem;
+}
