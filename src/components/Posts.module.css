@@ -1,0 +1,10 @@
+.container {
+    margin: 3rem 0;
+    display: flex;
+    
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
