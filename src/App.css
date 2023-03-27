@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Zilla+Slab+Highlight:wght@700&display=swap');
 body {
     width: 100vw;
+    font-family: 'PingFang TC';
 }
 
 a:hover, a:active, a:link, a:visited {

@@ -1,18 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
-import { auth, db } from "../../config/firebase";
+import React, { useEffect } from "react";
+import { 
+  getDocs, collection, onSnapshot,
+  query, orderBy
+ } from "firebase/firestore";
+import { db } from "../../config/firebase";
 import classes from './Main.module.css';
 import Post from "./Post";
 
-const Main = () => {
-  const [postLists, setPostList] = useState([]);
+const Main = ({setPostList, postLists}) => {
   const postsCollectionRef = collection(db, "posts");
+  const q = query(postsCollectionRef, orderBy('date', 'desc'));
+
+  // useEffect(() => {
+  //   const getPosts = async () => {
+  //     const response = await getDocs(q);
+  //     setPostList(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //   };       
+  //   getPosts();
+  // }, []);
 
   useEffect(() => {
-    const getPosts = async () => {
-      const response = await getDocs(postsCollectionRef);
-      setPostList(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
+    const getPosts = () => {
+      onSnapshot(q, (snapshot) => {
+        setPostList(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      });
+    };       
     getPosts();
   }, []);
 

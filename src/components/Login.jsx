@@ -9,8 +9,8 @@ const Lonin = () => {
 
   const logInWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
-    navigate("/");
-  };
+    navigate("/", {replace: true});
+  }; //the current entry in the history stack will be replaced with the new one.
 
   return (
     <div className={classes.container}>

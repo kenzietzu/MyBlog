@@ -10,6 +10,7 @@
     background-color: rgb(243, 243, 243);
     overflow-y: auto;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .postBox::-webkit-scrollbar {
@@ -17,8 +18,15 @@
     background-color: rgb(142, 142, 142);
 }
 
-.post {
-    
+.delete {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
 }
 
 .title {
@@ -27,14 +35,18 @@
 }
 
 .category {
+    font-size: 1.4rem;
+    margin-top: 2rem;
 }
 
 .date {
+    font-size: 1.4rem;
 
 }
 
 .authorName {
-
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
 
 .content {
